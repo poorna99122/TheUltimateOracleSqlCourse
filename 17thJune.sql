@@ -101,6 +101,34 @@ select * from products;
 
 
 
+-------------------------------------------------
+--23. Select statement in it's simplest form
+-------------------------------------------------
+SELECT
+    product_name,
+    price
+FROM
+    products;
+
+
+select * from products;
+
+
+SELECT
+    name,
+    salary,
+    25,
+    'test',
+    salary - salary * 0.10,
+    to_char(hire_date),
+    ROWNUM
+FROM
+    employee;
+
+
+
+
+
 
 
 
