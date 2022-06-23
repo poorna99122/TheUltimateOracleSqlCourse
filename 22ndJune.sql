@@ -4,36 +4,64 @@
 
 --From this section we are going to learn filtering and sorting 
 
-
 ---------------------------------------------------------------------------
 --29.Filtering results (Introducing WHERE clause)
 ---------------------------------------------------------------------------
-select * from products;
-select * from products where price < 10;
+SELECT *
+FROM products;
 
-select * from products where expiration_date < '01-jun-2026';
-select * from products where expiration_date < DATE '2026-05-01';
+SELECT *
+FROM products
+WHERE price < 10;
 
+SELECT *
+FROM products
+WHERE expiration_date < '01-jun-2026';
+
+SELECT *
+FROM products
+WHERE expiration_date < DATE '2026-05-01';
 
 ---------------------------------------------------------------------------
 -- 30. Practicing Challenge (Filtering results)
 ---------------------------------------------------------------------------
-select * from department;
-select * from department where monthly_budget >= 20000;
+SELECT *
+FROM department;
 
+SELECT *
+FROM department
+WHERE monthly_budget >= 20000;
 
-select * from employee;
-select NAME,PHONE,BIRTHDATE from employee where BIRTHDATE < '01-01-1990';
+SELECT *
+FROM employee;
 
+SELECT name, phone, birthdate
+FROM employee
+WHERE birthdate < '01-01-1990';
 
+---------------------------------------------------------------------------
+-- 31. More Complex WHERE Conditions
+---------------------------------------------------------------------------
+SELECT *
+FROM products;
+--And 
+SELECT *
+FROM products
+WHERE price < 10 AND expiration_date > DATE '2025-12-31';  
+--OR
+SELECT *
+FROM products
+WHERE price < 10 OR expiration_date > DATE '2025-12-31';
 
+--Three conditioned statement 
+SELECT *
+FROM products
+WHERE expiration_date > DATE '2025-12-31' AND price = 5 OR price = 25;
 
-
-
-
-
-
-
+--Combining the last two conditions 
+SELECT *
+FROM products
+WHERE expiration_date > DATE '2025-12-31' AND ( price = 5 OR price = 25 );
 
 
 
