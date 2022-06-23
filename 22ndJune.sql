@@ -64,6 +64,20 @@ FROM products
 WHERE expiration_date > DATE '2025-12-31' AND ( price = 5 OR price = 25 );
 
 
+---------------------------------------------------------------------------
+-- 32. Practicing Challenge : More complex WHERE conditions 
+---------------------------------------------------------------------------
+select * from employee;
+select * from employee where salary < 3000 OR birthdate < DATE '1985-01-01';
+
+
+
+
+
+
+
+
+
 
 
 
